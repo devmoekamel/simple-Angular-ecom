@@ -1,0 +1,40 @@
+<div class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center bg-white p-4 rounded shadow">
+        <h2 class="text-primary mb-4">Product Details #{{ product?.id }}</h2>
+
+        <img
+          [src]="product?.img"
+          [alt]="product?.name"
+          class="img-fluid rounded mb-4 border"
+          style="max-height: 400px"
+        />
+
+        <ul class="list-group list-group-flush mb-4 text-start">
+          <li class="list-group-item">
+            <strong>Name:</strong> {{ product?.name }}
+          </li>
+          <li class="list-group-item">
+            <strong>Price:</strong> {{ product?.price | currency }}
+          </li>
+          <li class="list-group-item">
+            <strong>Quantity:</strong> {{ product?.quantity }}
+          </li>
+        </ul>
+
+        <div class="mb-4">
+          <i class="text-warning bi bi-star-fill"></i>
+          <i class="text-warning bi bi-star-fill"></i>
+          <i class="text-warning bi bi-star-fill"></i>
+          <i class="text-warning bi bi-star-fill"></i>
+          <i class="text-warning bi bi-star-fill"></i>
+        </div>
+
+        <a [routerLink]="['/products']" class="btn btn-outline-primary">
+          Back to Products
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
